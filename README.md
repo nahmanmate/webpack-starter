@@ -44,3 +44,9 @@ This is a relatively simple project, and the following was used:
 - Javascript (plain old vanilla js)
 - HTML & CSS
 - Webpack (and associated plugins)
+
+## License
+
+*Copyright belongs to James Johns.*
+
+[MIT License](https://github.com/nahmanmate/webpack-starter/blob/main/LICENSE).
