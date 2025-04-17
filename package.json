@@ -15,6 +15,7 @@
     "lint-staged": "^15.5.1",
     "prettier": "3.5.3",
     "style-loader": "^4.0.0",
+    "vitest": "^3.1.1",
     "webpack": "^5.99.0",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.1"
@@ -22,7 +23,8 @@
   "scripts": {
     "prepare": "husky",
     "lint": "eslint . --fix --max-warnings=0",
-    "format": "prettier . --write"
+    "format": "prettier . --write",
+    "test": "vitest"
   },
   "lint-staged": {
     "*.js": "pnpm run lint",
