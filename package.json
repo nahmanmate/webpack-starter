@@ -20,9 +20,12 @@
     "webpack-dev-server": "^5.2.1"
   },
   "scripts": {
-    "prepare": "husky"
+    "prepare": "husky",
+    "lint": "eslint . --fix --max-warnings=0",
+    "format": "prettier . --write"
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "*.js": "pnpm run lint",
+    "*.{js,css,md,html,json}": "pnpm run format"
   }
 }
