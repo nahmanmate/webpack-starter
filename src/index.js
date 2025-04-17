@@ -1,5 +1,4 @@
 import "./styles.css";
-import { greeting } from "./greeting.js";
 
 const body = document.querySelector("body");
 
