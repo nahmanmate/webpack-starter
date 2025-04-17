@@ -1,6 +1,6 @@
 # Webpack Starter
 
-This is a basic starter repository for webpack. 
+This is a basic starter repository for webpack.
 
 ## Features
 
@@ -47,6 +47,6 @@ This is a relatively simple project, and the following was used:
 
 ## License
 
-*Copyright belongs to James Johns.*
+_Copyright belongs to James Johns._
 
 [MIT License](https://github.com/nahmanmate/webpack-starter/blob/main/LICENSE).
