@@ -6,6 +6,7 @@ import css from "@eslint/css";
 import eslintConfig from "eslint/config";
 import { includeIgnoreFile } from "@eslint/compat";
 import path from "path";
+import eslintConfigPrettier from "eslint-config-prettier/flat";
 
 const { defineConfig, globalIgnores } = eslintConfig;
 const gitignorePath = path.resolve(".gitignore");
@@ -23,5 +24,6 @@ export default defineConfig([
     "dist/**",
     "*config*"
   ]),
-  includeIgnoreFile(gitignorePath)
+  includeIgnoreFile(gitignorePath),
+  eslintConfigPrettier
 ]);
