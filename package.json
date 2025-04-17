@@ -21,13 +21,15 @@
     "webpack-dev-server": "^5.2.1"
   },
   "scripts": {
+    "dev": "webpack serve --open",
+    "build": "webpack",
     "prepare": "husky",
     "lint": "eslint . --fix --max-warnings=0",
     "format": "prettier . --write",
     "test": "vitest"
   },
   "lint-staged": {
-    "*.js": "pnpm run lint",
-    "*.{js,css,md,html,json}": "pnpm run format"
+    "src/**/*.js": "pnpm run lint",
+    "src/**/*.{js,css,md,html,json}": "pnpm run format"
   }
 }
