@@ -7,6 +7,8 @@ import eslintConfig from "eslint/config";
 import { includeIgnoreFile } from "@eslint/compat";
 import path from "path";
 import eslintConfigPrettier from "eslint-config-prettier/flat";
+import vitest from "@vitest/eslint-plugin";
+
 
 const { defineConfig, globalIgnores } = eslintConfig;
 const gitignorePath = path.resolve(".gitignore");
@@ -50,6 +52,16 @@ export default defineConfig([
     plugins: { css },
     language: "css/css",
     extends: ["css/recommended"],
+  },
+  {
+    files: ["**/*{test,spec}.*"],
+    plugins: {
+      vitest
+    },
+    rules: {
+      ...vitest.configs.recommended.rules,
+      "vitest/max-nested-describe": ["error", { "max": 3 }]
+    },
   },
   globalIgnores(["node_modules/**", "dist/**", "*config*"]),
   includeIgnoreFile(gitignorePath),
